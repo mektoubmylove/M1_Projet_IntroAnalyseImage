@@ -51,7 +51,7 @@ def detect_stairs2(image_path):
 
     # Fusionner les lignes proches
     merged_lines_y = []
-    threshold = 30 # Seuil pour considérer deux lignes comme une seule marche
+    threshold = 60 # Seuil pour considérer deux lignes comme une seule marche
 
     for y in detected_lines_y:
         if not merged_lines_y or abs(y - merged_lines_y[-1]) > threshold:
@@ -86,4 +86,6 @@ def detect_stairs2(image_path):
 
     print(f"Nombre de marches détectées : {stair_count}")
 
-detect_stairs2("../data/train/Groupe1_Image3.jpg")
+    return stair_count
+
+detect_stairs2("../data/train/Groupe5_Image07.jpg")

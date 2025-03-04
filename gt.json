@@ -32,7 +32,7 @@
       {"image": "t3i17.png", "actual_count": 3, "predicted_count": null, "absolute_error": null},
       {"image": "t3i18.png", "actual_count": 3, "predicted_count": null, "absolute_error": null},
       {"image": "t3i19.png", "actual_count": 4, "predicted_count": null, "absolute_error": null},
-      {"image": "t3i20.png", "actual_count": 2, "predicted_count": null, "absolute_error": null},//
+      {"image": "t3i20.png", "actual_count": 2, "predicted_count": null, "absolute_error": null},
       {"image": "t3i21.png", "actual_count": 14, "predicted_count": null, "absolute_error": null},
       {"image": "t3i22.png", "actual_count": 7, "predicted_count": null, "absolute_error": null},
       {"image": "t3i23.png", "actual_count": 12, "predicted_count": null, "absolute_error": null},

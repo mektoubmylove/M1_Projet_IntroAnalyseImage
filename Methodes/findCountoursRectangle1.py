@@ -2,6 +2,7 @@ import cv2
 import imutils
 import numpy as np
 
+#FLOP
 def detect_stairs_rectangles(image_path):
     """
     Détecte et compte les marches d'un escalier en identifiant les formes rectangulaires.
@@ -45,6 +46,7 @@ def detect_stairs_rectangles(image_path):
     cv2.putText(image, f"Nombre de marches : {num_stairs}",
                 (40, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
+    """
     # Afficher les résultats
     cv2.namedWindow("Contours détectés", cv2.WINDOW_NORMAL)
     cv2.resizeWindow("Contours détectés", 640, 640)
@@ -56,4 +58,6 @@ def detect_stairs_rectangles(image_path):
 
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+    """
+    return  num_stairs
 #detect_stairs_rectangles("../data/train/Groupe1_Image3.jpg")

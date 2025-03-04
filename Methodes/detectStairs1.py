@@ -2,7 +2,7 @@ import cv2
 import imutils
 import numpy as np
 
-def detect_stairs(image_path):
+def detect_stairs1(image_path):
     """
     Détecte et compte les marches d'un escalier en utilisant des contours et des lignes de Hough.
 
@@ -71,6 +71,7 @@ def detect_stairs(image_path):
                 cv2.FONT_HERSHEY_SIMPLEX, 1, 255, 2)
 
     # Affichage des résultats
+    """
     cv2.namedWindow("Image Originale", cv2.WINDOW_NORMAL)
     cv2.resizeWindow("Image Originale", 640, 640)
     cv2.imshow("Image Originale", image)
@@ -82,10 +83,11 @@ def detect_stairs(image_path):
     cv2.namedWindow("Lignes détectées", cv2.WINDOW_NORMAL)
     cv2.resizeWindow("Lignes détectées", 640, 640)
     cv2.imshow("Lignes détectées", output_image)
-
+    
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-
-    print(f"Nombre de marches détectées : {stair_count}")
+    """
+    print(f"Nombre de marches détectées {image_path}: {stair_count}")
+    return stair_count
 
 #detect_stairs("../data/train/Groupe1_Image3.jpg")

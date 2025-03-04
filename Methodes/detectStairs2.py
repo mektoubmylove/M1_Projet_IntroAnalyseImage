@@ -1,3 +1,5 @@
+import os
+
 import cv2
 import imutils
 import numpy as np
@@ -10,6 +12,7 @@ def detect_stairs2(image_path):
     :param image_path: Chemin de l'image contenant l'escalier.
     """
     # Charger l'image
+    image_path = os.path.abspath(image_path)
     image = cv2.imread(image_path)
     image = imutils.resize(image, width=500)
     if image is None:
@@ -17,6 +20,7 @@ def detect_stairs2(image_path):
 
     # Convertir en niveaux de gris et appliquer un flou gaussien
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
+
     blurred = cv2.GaussianBlur(gray, (3, 3), 0)
 
     # Détection des contours avec Sobel
@@ -69,6 +73,7 @@ def detect_stairs2(image_path):
                 cv2.FONT_HERSHEY_SIMPLEX, 1, 255, 2)
 
     # Affichage des résultats
+    """
     cv2.namedWindow("Image Originale", cv2.WINDOW_NORMAL)
     cv2.resizeWindow("Image Originale", 640, 640)
     cv2.imshow("Image Originale", image)
@@ -83,9 +88,9 @@ def detect_stairs2(image_path):
 
     cv2.waitKey(0)
     cv2.destroyAllWindows()
-
-    print(f"Nombre de marches détectées : {stair_count}")
+    """
+    print(f"Nombre de marches détectées {image_path} : {stair_count}")
 
     return stair_count
 
-detect_stairs2("../data/train/Groupe5_Image07.jpg")
+#detect_stairs2("../data/train/Groupe5_Image07.jpg")

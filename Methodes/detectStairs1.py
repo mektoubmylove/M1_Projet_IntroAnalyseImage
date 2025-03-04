@@ -14,9 +14,6 @@ def detect_stairs1(image_path):
     if image is None:
         raise FileNotFoundError(f"Impossible de charger l'image : {image_path}")
 
-    # Si l'image est trop grande, on la recadre
-    if image.shape[1] > 1000 and image.shape[0] > 1000:
-        image = image[100: image.shape[0] - 100, 100: image.shape[1] - 100]
 
     # Convertir en niveaux de gris
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

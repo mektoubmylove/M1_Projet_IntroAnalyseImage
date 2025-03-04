@@ -37,7 +37,7 @@ def detect_stairs_rectangles(image_path):
             x, y, w, h = cv2.boundingRect(approx)
 
             # Filtrer les petits rectangles (bruit)
-            if w > 50 and h > 20:  # Ajuster selon la taille des marches
+            if w > 30 and h > 15:
                 detected_rectangles.append((x, y, w, h))
                 cv2.rectangle(image, (x, y), (x + w, y + h), (0, 255, 0), 2)
 

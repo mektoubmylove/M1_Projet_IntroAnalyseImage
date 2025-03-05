@@ -57,9 +57,9 @@ def update_json_with_predictions(train_dir, json_file, output_file):
     with open(output_file, "w") as file:
         json.dump(data, file, indent=4)
 
-    print(f"\n✅ Fichier JSON mis à jour : {output_file}")
-    print(f"📊 Images traitées : {total_images - failed_images}/{total_images}")
-    print(f"❌ Images non traitées : {failed_images}")
+    print(f"\nFichier JSON mis à jour : {output_file}")
+    print(f"Images traitées : {total_images - failed_images}/{total_images}")
+    print(f"Images non traitées : {failed_images}")
 
 
 def evaluate_predictions(json_file):
@@ -84,12 +84,12 @@ def evaluate_predictions(json_file):
         mae = np.mean(absolute_errors)  # Mean Absolute Error
         rmse = np.sqrt(np.mean(np.square(absolute_errors)))  # Root Mean Squared Error
 
-        print("\n📊 **Évaluation des performances :**")
-        print(f"🔹 Erreur Absolue Moyenne (MAE) : {mae:.2f} marches")
-        print(f"🔹 Erreur Quadratique Moyenne (RMSE) : {rmse:.2f} marches")
+        print("\n**Évaluation des performances :**")
+        print(f"Erreur Absolue Moyenne (MAE) : {mae:.2f} marches")
+        print(f"Erreur Quadratique Moyenne (RMSE) : {rmse:.2f} marches")
         return mae, rmse
     else:
-        print("❌ Aucune prédiction valide disponible pour évaluation.")
+        print("Aucune prédiction valide disponible pour évaluation.")
         return None, None
 
 

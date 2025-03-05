@@ -25,7 +25,7 @@ def detect_stairs2(image_path):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     # Appliquer un flou gaussien pour réduire le bruit et améliorer la détection des contours
-    blurred = cv2.GaussianBlur(gray, (3, 3), 0)
+    blurred = cv2.GaussianBlur(gray, (5, 5), 0)
 
     # Détection des contours avec les filtres Sobel (dérivées en X et Y)
     sobel_x = cv2.Sobel(blurred, cv2.CV_16S, 1, 0, ksize=3)  # Dérivée en X
@@ -53,7 +53,7 @@ def detect_stairs2(image_path):
             pente = abs(y2 - y1) / (abs(x2 - x1) + 1e-6)  # Calcul de la pente
 
             # Garder seulement les lignes horizontales
-            if 0 < pente < 1:
+            if 0 < pente < 3:
                 detected_lines_y.append((y1 + y2) // 2)
 
     # Trier les lignes détectées en fonction de leur coordonnée Y
@@ -61,7 +61,7 @@ def detect_stairs2(image_path):
 
     # Fusionner les lignes proches pour éviter de compter plusieurs fois la même marche
     merged_lines_y = []
-    threshold = 60  # Seuil pour considérer que deux lignes sont la même marche
+    threshold = 30  # Seuil pour considérer que deux lignes sont la même marche
 
     for y in detected_lines_y:
         # Si la liste `merged_lines_y` est vide ou si la nouvelle ligne détectée est suffisamment éloignée
@@ -83,25 +83,25 @@ def detect_stairs2(image_path):
     cv2.putText(output_image, f"Marches: {stair_count}", (40, 60),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, 255, 2)
 
-    # Affichage des résultats
-    """
-    cv2.namedWindow("Image Originale", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Image Originale", 640, 640)
-    cv2.imshow("Image Originale", image)
+    #0Affichage des résultats
+    
+    # cv2.namedWindow("Image Originale", cv2.WINDOW_NORMAL)
+    # cv2.resizeWindow("Image Originale", 640, 640)
+    # cv2.imshow("Image Originale", image)
 
-    cv2.namedWindow("Contours Sobel", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Contours Sobel", 640, 640)
-    cv2.imshow("Contours Sobel", sobel_combined)
+    # cv2.namedWindow("Contours Sobel", cv2.WINDOW_NORMAL)
+    # cv2.resizeWindow("Contours Sobel", 640, 640)
+    # cv2.imshow("Contours Sobel", sobel_combined)
 
-    cv2.namedWindow("Lignes fusionnées", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Lignes fusionnées", 640, 640)
-    cv2.imshow("Lignes fusionnées", output_image)
+    # cv2.namedWindow("Lignes fusionnées", cv2.WINDOW_NORMAL)
+    # cv2.resizeWindow("Lignes fusionnées", 640, 640)
+    # cv2.imshow("Lignes fusionnées", output_image)
 
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
-    """
+    # cv2.waitKey(0)
+    # cv2.destroyAllWindows()
+
     print(f"Nombre de marches détectées {image_path} : {stair_count}")
 
     return stair_count
 
-#detect_stairs2("../data/train/Groupe5_Image07.jpg")
+detect_stairs2("C:/Users/Pepit/Documents/GitHub/M1_Projet_IntroAnalyseImage/data/train/grp7img12.jpg")

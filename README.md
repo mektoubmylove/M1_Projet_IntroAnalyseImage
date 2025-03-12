@@ -10,6 +10,13 @@ L’objectif principal est de développer une méthode fiable pour :
 - Évaluer les performances du système sur un jeu de données construit pour l’occasion.
 - Identifier les limites de la méthode et proposer des améliorations.
 
+### Exemple d'escaliers
+
+| Image 1 | Image 2 | Image 3 |
+|---------|---------|---------|
+| ![Image 1](assets/img1preview.jpg) | ![Image 2](assets/img2preview.png) | ![Image 3](assets/img3preview.jpg) |
+
+
 ## 📂 Structure du Projet
 - **📁 data/** : Contient les images d’escalier avec annotations du nombre de marches.
 - **📁 Méthodes/** : Code source pour la détection et le comptage des marches.

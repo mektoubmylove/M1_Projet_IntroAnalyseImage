@@ -10,7 +10,7 @@ L’objectif principal est de développer une méthode fiable pour :
 - Évaluer les performances du système sur un jeu de données construit pour l’occasion.
 - Identifier les limites de la méthode et proposer des améliorations.
 
-### Exemple d'escaliers
+### Exemple d'images
 
 | Image 1 | Image 2 | Image 3 |
 |---------|---------|---------|

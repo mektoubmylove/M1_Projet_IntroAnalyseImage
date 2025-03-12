@@ -42,7 +42,7 @@ def update_json_with_predictions(train_dir, json_file, output_file):
                     raise ValueError("Détection échouée")
 
             except Exception as e:
-                print(f"❌ Erreur avec {image_name}: {e}")
+                print(f" Erreur avec {image_name}: {e}")
                 predicted_count, absolute_error = None, None
                 failed_images += 1
 

@@ -104,4 +104,4 @@ def detect_stairs2(image_path):
 
     return stair_count
 
-detect_stairs2("C:/Users/Pepit/Documents/GitHub/M1_Projet_IntroAnalyseImage/data/train/grp7img12.jpg")
+#detect_stairs2("C:/Users/Pepit/Documents/GitHub/M1_Projet_IntroAnalyseImage/data/train/grp7img12.jpg")

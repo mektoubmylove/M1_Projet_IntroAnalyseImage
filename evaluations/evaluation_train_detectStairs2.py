@@ -94,8 +94,8 @@ def evaluate_predictions(json_file):
 
 
 # Exécution du script
-train_directory = "data/train"
-ground_truth_json = "gt.json"
+train_directory = "../data/train"
+ground_truth_json = "../gt.json"
 updated_json = "gt_result_train_detectStairs2.json"
 
 # 1️⃣ Mise à jour des prédictions

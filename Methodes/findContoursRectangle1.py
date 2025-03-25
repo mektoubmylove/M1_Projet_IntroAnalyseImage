@@ -1,8 +1,8 @@
 import cv2
 import imutils
 import numpy as np
+import matplotlib.pyplot as plt  # Import de matplotlib pour l'affichage
 
-#FLOP
 def detect_stairs_rectangles(image_path):
     """
     Détecte et compte les marches d'un escalier en identifiant les formes rectangulaires.
@@ -11,7 +11,7 @@ def detect_stairs_rectangles(image_path):
     """
     # Charger l'image en niveaux de gris
     image = cv2.imread(image_path)
-    image=imutils.resize(image, width=800)
+    image = imutils.resize(image, width=800)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 
     # Appliquer un flou pour lisser l'image et réduire le bruit
@@ -45,19 +45,25 @@ def detect_stairs_rectangles(image_path):
     num_stairs = len(detected_rectangles)
     cv2.putText(image, f"Nombre de marches : {num_stairs}",
                 (40, 60), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
-
     """
-    # Afficher les résultats
-    cv2.namedWindow("Contours détectés", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Contours détectés", 640, 640)
-    cv2.imshow("Contours détectés", edges)
+    # Affichage des résultats avec Matplotlib
+    fig, axes = plt.subplots(1, 2, figsize=(12, 6))
 
-    cv2.namedWindow("Marches détectées", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Marches détectées", 640, 640)
-    cv2.imshow("Marches détectées", image)
+    # Image des contours détectés
+    axes[0].imshow(edges, cmap='gray')
+    axes[0].set_title("Contours détectés")
+    axes[0].axis("off")
 
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    # Image des marches détectées avec rectangles
+    axes[1].imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
+    axes[1].set_title("Marches détectées")
+    axes[1].axis("off")
+
+    # Afficher la fenêtre
+    plt.tight_layout()
+    plt.show()
     """
-    return  num_stairs
+    return num_stairs
+
+# Test avec une image
 #detect_stairs_rectangles("../data/train/Groupe1_Image3.jpg")

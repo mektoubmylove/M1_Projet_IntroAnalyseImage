@@ -1,0 +1,592 @@
+{
+    "data": [
+        {
+            "image": "Groupe2_Image1.jpeg",
+            "actual_count": 4,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe2_Image2.jpeg",
+            "actual_count": 7,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe2_Image3.jpeg",
+            "actual_count": 9,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe2_Image4.png",
+            "actual_count": 6,
+            "predicted_count": 10,
+            "absolute_error": 4
+        },
+        {
+            "image": "Groupe2_Image5.jpeg",
+            "actual_count": 8,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe2_Image6.jpeg",
+            "actual_count": 10,
+            "predicted_count": 11,
+            "absolute_error": 1
+        },
+        {
+            "image": "Groupe2_Image7.jpeg",
+            "actual_count": 10,
+            "predicted_count": 10,
+            "absolute_error": 0
+        },
+        {
+            "image": "Groupe2_Image8.jpg",
+            "actual_count": 9,
+            "predicted_count": 8,
+            "absolute_error": 1
+        },
+        {
+            "image": "Groupe2_Image9.jpg",
+            "actual_count": 9,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe2_Image10.jpg",
+            "actual_count": 10,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe2_Image11.jpg",
+            "actual_count": 9,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe2_Image12.png",
+            "actual_count": 7,
+            "predicted_count": 7,
+            "absolute_error": 0
+        },
+        {
+            "image": "Groupe2_Image13.png",
+            "actual_count": 16,
+            "predicted_count": 7,
+            "absolute_error": 9
+        },
+        {
+            "image": "t3i1.jpg",
+            "actual_count": 11,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i2.jpg",
+            "actual_count": 12,
+            "predicted_count": 10,
+            "absolute_error": 2
+        },
+        {
+            "image": "t3i3.jpg",
+            "actual_count": 7,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i4.jpg",
+            "actual_count": 10,
+            "predicted_count": 11,
+            "absolute_error": 1
+        },
+        {
+            "image": "t3i5.jpg",
+            "actual_count": 5,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i6.jpg",
+            "actual_count": 4,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i7.jpg",
+            "actual_count": 22,
+            "predicted_count": 9,
+            "absolute_error": 13
+        },
+        {
+            "image": "t3i8.jpg",
+            "actual_count": 17,
+            "predicted_count": 10,
+            "absolute_error": 7
+        },
+        {
+            "image": "t3i9.jpg",
+            "actual_count": 21,
+            "predicted_count": 5,
+            "absolute_error": 16
+        },
+        {
+            "image": "t3i10.jpg",
+            "actual_count": 34,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i11.jpeg",
+            "actual_count": 6,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i12.jpg",
+            "actual_count": 5,
+            "predicted_count": 4,
+            "absolute_error": 1
+        },
+        {
+            "image": "t3i13.jpg",
+            "actual_count": 4,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i14.jpeg",
+            "actual_count": 4,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i15.jpg",
+            "actual_count": 5,
+            "predicted_count": 5,
+            "absolute_error": 0
+        },
+        {
+            "image": "t3i16.png",
+            "actual_count": 4,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i17.png",
+            "actual_count": 3,
+            "predicted_count": 3,
+            "absolute_error": 0
+        },
+        {
+            "image": "t3i18.png",
+            "actual_count": 3,
+            "predicted_count": 3,
+            "absolute_error": 0
+        },
+        {
+            "image": "t3i19.png",
+            "actual_count": 4,
+            "predicted_count": 3,
+            "absolute_error": 1
+        },
+        {
+            "image": "t3i20.png",
+            "actual_count": 2,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i21.jpeg",
+            "actual_count": 14,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i22.png",
+            "actual_count": 7,
+            "predicted_count": 7,
+            "absolute_error": 0
+        },
+        {
+            "image": "t3i23.jpg",
+            "actual_count": 12,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i24.jpg",
+            "actual_count": 10,
+            "predicted_count": 9,
+            "absolute_error": 1
+        },
+        {
+            "image": "t3i25.jpg",
+            "actual_count": 7,
+            "predicted_count": 8,
+            "absolute_error": 1
+        },
+        {
+            "image": "t3i26.jpg",
+            "actual_count": 8,
+            "predicted_count": 7,
+            "absolute_error": 1
+        },
+        {
+            "image": "t3i27.jpg",
+            "actual_count": 7,
+            "predicted_count": 9,
+            "absolute_error": 2
+        },
+        {
+            "image": "t3i28.jpg",
+            "actual_count": 8,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "t3i29.jpg",
+            "actual_count": 12,
+            "predicted_count": 10,
+            "absolute_error": 2
+        },
+        {
+            "image": "t3i30.jpg",
+            "actual_count": 7,
+            "predicted_count": 9,
+            "absolute_error": 2
+        },
+        {
+            "image": "Groupe6_image1.jpg",
+            "actual_count": 15,
+            "predicted_count": 9,
+            "absolute_error": 6
+        },
+        {
+            "image": "Groupe6_image2.jpg",
+            "actual_count": 7,
+            "predicted_count": 9,
+            "absolute_error": 2
+        },
+        {
+            "image": "Groupe6_image3.jpg",
+            "actual_count": 11,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe6_image4.jpg",
+            "actual_count": 9,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe6_image5.jpg",
+            "actual_count": 7,
+            "predicted_count": 7,
+            "absolute_error": 0
+        },
+        {
+            "image": "Groupe6_image6.jpg",
+            "actual_count": 9,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe6_image7.jpg",
+            "actual_count": 7,
+            "predicted_count": 11,
+            "absolute_error": 4
+        },
+        {
+            "image": "Groupe6_image8.jpg",
+            "actual_count": 10,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe6_image9.jpg",
+            "actual_count": 10,
+            "predicted_count": 10,
+            "absolute_error": 0
+        },
+        {
+            "image": "Groupe6_image10.jpg",
+            "actual_count": 8,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe1_Image1.jpg",
+            "actual_count": 11,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe1_Image2.jpg",
+            "actual_count": 8,
+            "predicted_count": 8,
+            "absolute_error": 0
+        },
+        {
+            "image": "Groupe1_Image3.jpg",
+            "actual_count": 13,
+            "predicted_count": 9,
+            "absolute_error": 4
+        },
+        {
+            "image": "Groupe1_Image4.jpg",
+            "actual_count": 12,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe1_Image5.jpg",
+            "actual_count": 12,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe1_Image6.jpg",
+            "actual_count": 6,
+            "predicted_count": 8,
+            "absolute_error": 2
+        },
+        {
+            "image": "Groupe1_Image7.jpg",
+            "actual_count": 6,
+            "predicted_count": 7,
+            "absolute_error": 1
+        },
+        {
+            "image": "Groupe1_Image8.jpg",
+            "actual_count": 17,
+            "predicted_count": 11,
+            "absolute_error": 6
+        },
+        {
+            "image": "Groupe1_Image9.jpg",
+            "actual_count": 9,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe1_Image10.jpg",
+            "actual_count": 15,
+            "predicted_count": 15,
+            "absolute_error": 0
+        },
+        {
+            "image": "img1.png",
+            "actual_count": 8,
+            "predicted_count": 9,
+            "absolute_error": 1
+        },
+        {
+            "image": "img2.jpg",
+            "actual_count": 10,
+            "predicted_count": 7,
+            "absolute_error": 3
+        },
+        {
+            "image": "img3.png",
+            "actual_count": 22,
+            "predicted_count": 9,
+            "absolute_error": 13
+        },
+        {
+            "image": "img4.jpg",
+            "actual_count": 37,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "img5.jpg",
+            "actual_count": 5,
+            "predicted_count": 11,
+            "absolute_error": 6
+        },
+        {
+            "image": "img6.jpg",
+            "actual_count": 11,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "img7.png",
+            "actual_count": 11,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "img8.png",
+            "actual_count": 10,
+            "predicted_count": 8,
+            "absolute_error": 2
+        },
+        {
+            "image": "img9.png",
+            "actual_count": 12,
+            "predicted_count": 9,
+            "absolute_error": 3
+        },
+        {
+            "image": "grp7img1.jpeg",
+            "actual_count": 15,
+            "predicted_count": 6,
+            "absolute_error": 9
+        },
+        {
+            "image": "grp7img2.jpeg",
+            "actual_count": 11,
+            "predicted_count": 9,
+            "absolute_error": 2
+        },
+        {
+            "image": "grp7img3.jpeg",
+            "actual_count": 15,
+            "predicted_count": 5,
+            "absolute_error": 10
+        },
+        {
+            "image": "grp7img4.jpeg",
+            "actual_count": 2,
+            "predicted_count": 7,
+            "absolute_error": 5
+        },
+        {
+            "image": "grp7img5.jpeg",
+            "actual_count": 10,
+            "predicted_count": 8,
+            "absolute_error": 2
+        },
+        {
+            "image": "grp7img10.jpg",
+            "actual_count": 10,
+            "predicted_count": 10,
+            "absolute_error": 0
+        },
+        {
+            "image": "grp7img11.jpg",
+            "actual_count": 6,
+            "predicted_count": 9,
+            "absolute_error": 3
+        },
+        {
+            "image": "grp7img12.jpg",
+            "actual_count": 22,
+            "predicted_count": 10,
+            "absolute_error": 12
+        },
+        {
+            "image": "Groupe5_image01.jpg",
+            "actual_count": 9,
+            "predicted_count": 4,
+            "absolute_error": 5
+        },
+        {
+            "image": "Groupe5_image02.jpg",
+            "actual_count": 4,
+            "predicted_count": 7,
+            "absolute_error": 3
+        },
+        {
+            "image": "Groupe5_image03.jpg",
+            "actual_count": 38,
+            "predicted_count": 9,
+            "absolute_error": 29
+        },
+        {
+            "image": "Groupe5_image04.jpg",
+            "actual_count": 6,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe5_image05.jpg",
+            "actual_count": 7,
+            "predicted_count": 10,
+            "absolute_error": 3
+        },
+        {
+            "image": "Groupe5_image06.jpg",
+            "actual_count": 5,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe5_image07.jpg",
+            "actual_count": 11,
+            "predicted_count": 4,
+            "absolute_error": 7
+        },
+        {
+            "image": "Groupe5_image08.jpg",
+            "actual_count": 14,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe5_image09.jpg",
+            "actual_count": 8,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe5_image10.jpeg",
+            "actual_count": 14,
+            "predicted_count": 7,
+            "absolute_error": 7
+        },
+        {
+            "image": "Groupe5_image11.jpeg",
+            "actual_count": 13,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe5_image12.jpeg",
+            "actual_count": 15,
+            "predicted_count": 13,
+            "absolute_error": 2
+        },
+        {
+            "image": "Groupe5_image13.jpeg",
+            "actual_count": 3,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe5_image14.jpeg",
+            "actual_count": 4,
+            "predicted_count": 7,
+            "absolute_error": 3
+        },
+        {
+            "image": "Groupe5_image15.jpeg",
+            "actual_count": 8,
+            "predicted_count": 8,
+            "absolute_error": 0
+        },
+        {
+            "image": "Groupe5_image16.jpeg",
+            "actual_count": 10,
+            "predicted_count": 9,
+            "absolute_error": 1
+        },
+        {
+            "image": "Groupe5_image17.jpeg",
+            "actual_count": 13,
+            "predicted_count": null,
+            "absolute_error": null
+        },
+        {
+            "image": "Groupe5_image18.jpeg",
+            "actual_count": 8,
+            "predicted_count": null,
+            "absolute_error": null
+        }
+    ]
+}

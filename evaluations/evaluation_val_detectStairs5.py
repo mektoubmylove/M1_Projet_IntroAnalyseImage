@@ -1,16 +1,16 @@
 import json
 import os
 
-
+import cv2
 import numpy as np
-#flop
 
-from Methodes.findCountoursRectangle1 import detect_stairs_rectangles
+
+from Methodes.detectStairs5 import detect_stairs_with_homography
 
 
 def update_json_with_predictions(train_dir, json_file, output_file):
     """
-    Parcourt le dossier train, applique detect_stairs2(), et met à jour gt.json avec les résultats.
+    Parcourt le dossier val, applique detect_stairs5(), et met à jour gt.json avec les résultats.
 
     :param train_dir: Chemin du dossier contenant les images d'entraînement.
     :param json_file: Fichier JSON contenant la vérité terrain (gt.json).
@@ -35,7 +35,13 @@ def update_json_with_predictions(train_dir, json_file, output_file):
 
             try:
                 # Obtenir la prédiction du nombre de marches
-                predicted_count = detect_stairs_rectangles(image_path)
+                predicted_values = detect_stairs_with_homography(image_path)
+
+                # Vérifier si la sortie est un tuple et récupérer uniquement le nombre de marches
+                if isinstance(predicted_values, tuple):
+                    predicted_count = predicted_values[0]  # On récupère stair_count
+                else:
+                    predicted_count = predicted_values
 
                 if predicted_count is not None:
                     absolute_error = abs(predicted_count - actual_count)
@@ -43,7 +49,7 @@ def update_json_with_predictions(train_dir, json_file, output_file):
                     raise ValueError("Détection échouée")
 
             except Exception as e:
-                print(f"❌ Erreur avec {image_name}: {e}")
+                print(f" Erreur avec {image_name}: {e}")
                 predicted_count, absolute_error = None, None
                 failed_images += 1
 
@@ -95,12 +101,12 @@ def evaluate_predictions(json_file):
 
 
 # Exécution du script
-train_directory = "data/train"
-ground_truth_json = "gt.json"
-updated_json = "gt_result_findCountoursRectangle1.json"
+train_directory = "../data/val"
+ground_truth_json = "../gt.json"
+updated_json = "gt_result_val_detectStairs5.json"
 
-# 1️⃣ Mise à jour des prédictions
+#  Mise à jour des prédictions
 update_json_with_predictions(train_directory, ground_truth_json, updated_json)
 
-# 2️⃣ Calcul des métriques
+#  Calcul des métriques
 evaluate_predictions(updated_json)

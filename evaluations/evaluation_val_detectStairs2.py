@@ -4,12 +4,12 @@ import os
 import cv2
 import numpy as np
 
-from Methodes.detectStairs1 import detect_stairs1
+from Methodes.detectStairs2 import detect_stairs2
 
 
 def update_json_with_predictions(train_dir, json_file, output_file):
     """
-    Parcourt le dossier train, applique detect_stairs2(), et met à jour gt.json avec les résultats.
+    Parcourt le dossier val, applique detect_stairs2(), et met à jour gt.json avec les résultats.
 
     :param train_dir: Chemin du dossier contenant les images d'entraînement.
     :param json_file: Fichier JSON contenant la vérité terrain (gt.json).
@@ -34,7 +34,7 @@ def update_json_with_predictions(train_dir, json_file, output_file):
 
             try:
                 # Obtenir la prédiction du nombre de marches
-                predicted_count = detect_stairs1(image_path)
+                predicted_count = detect_stairs2(image_path)
 
                 if predicted_count is not None:
                     absolute_error = abs(predicted_count - actual_count)
@@ -42,7 +42,7 @@ def update_json_with_predictions(train_dir, json_file, output_file):
                     raise ValueError("Détection échouée")
 
             except Exception as e:
-                print(f"❌ Erreur avec {image_name}: {e}")
+                print(f" Erreur avec {image_name}: {e}")
                 predicted_count, absolute_error = None, None
                 failed_images += 1
 
@@ -57,9 +57,9 @@ def update_json_with_predictions(train_dir, json_file, output_file):
     with open(output_file, "w") as file:
         json.dump(data, file, indent=4)
 
-    print(f"\n Fichier JSON mis à jour : {output_file}")
-    print(f" Images traitées : {total_images - failed_images}/{total_images}")
-    print(f" Images non traitées : {failed_images}")
+    print(f"\nFichier JSON mis à jour : {output_file}")
+    print(f"Images traitées : {total_images - failed_images}/{total_images}")
+    print(f"Images non traitées : {failed_images}")
 
 
 def evaluate_predictions(json_file):
@@ -84,9 +84,9 @@ def evaluate_predictions(json_file):
         mae = np.mean(absolute_errors)  # Mean Absolute Error
         rmse = np.sqrt(np.mean(np.square(absolute_errors)))  # Root Mean Squared Error
 
-        print("\n **Évaluation des performances :**")
-        print(f" Erreur Absolue Moyenne (MAE) : {mae:.2f} marches")
-        print(f" Erreur Quadratique Moyenne (RMSE) : {rmse:.2f} marches")
+        print("\n**Évaluation des performances :**")
+        print(f"Erreur Absolue Moyenne (MAE) : {mae:.2f} marches")
+        print(f"Erreur Quadratique Moyenne (RMSE) : {rmse:.2f} marches")
         return mae, rmse
     else:
         print("Aucune prédiction valide disponible pour évaluation.")
@@ -94,9 +94,9 @@ def evaluate_predictions(json_file):
 
 
 # Exécution du script
-train_directory = "data/train"
-ground_truth_json = "gt.json"
-updated_json = "gt_result_train_detectStairs1.json"
+train_directory = "../data/val"
+ground_truth_json = "../gt.json"
+updated_json = "gt_result_val_detectStairs2.json"
 
 # 1️⃣ Mise à jour des prédictions
 update_json_with_predictions(train_directory, ground_truth_json, updated_json)

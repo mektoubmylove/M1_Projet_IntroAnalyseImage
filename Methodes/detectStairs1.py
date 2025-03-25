@@ -1,6 +1,7 @@
 import cv2
 import imutils
 import numpy as np
+import matplotlib.pyplot as plt
 
 def detect_stairs1(image_path):
     """
@@ -13,7 +14,6 @@ def detect_stairs1(image_path):
     image = imutils.resize(image, width=500)
     if image is None:
         raise FileNotFoundError(f"Impossible de charger l'image : {image_path}")
-
 
     # Convertir en niveaux de gris
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -64,27 +64,32 @@ def detect_stairs1(image_path):
 
     # Affichage du nombre de marches
     stair_count = len(filtered_points)
-    cv2.putText(output_image, f"Nombre de marches: {stair_count}", (40, 60),
+    cv2.putText(output_image, f"Marches: {stair_count}", (20, 40),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, 255, 2)
 
-    # Affichage des résultats
+    # Convertir les images pour affichage avec Matplotlib
+    image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
+    sobel_combined_rgb = cv2.cvtColor(sobel_combined, cv2.COLOR_GRAY2RGB)
+    output_image_rgb = cv2.cvtColor(output_image, cv2.COLOR_GRAY2RGB)
     """
-    cv2.namedWindow("Image Originale", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Image Originale", 640, 640)
-    cv2.imshow("Image Originale", image)
+    # Affichage avec subplots
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
-    cv2.namedWindow("Contours Sobel", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Contours Sobel", 640, 640)
-    cv2.imshow("Contours Sobel", sobel_combined)
+    axes[0].imshow(image_rgb)
+    axes[0].set_title("Image originale")
+    axes[0].axis("off")
 
-    cv2.namedWindow("Lignes détectées", cv2.WINDOW_NORMAL)
-    cv2.resizeWindow("Lignes détectées", 640, 640)
-    cv2.imshow("Lignes détectées", output_image)
-    
-    cv2.waitKey(0)
-    cv2.destroyAllWindows()
+    axes[1].imshow(sobel_combined_rgb, cmap="gray")
+    axes[1].set_title("Contours Sobel")
+    axes[1].axis("off")
+
+    axes[2].imshow(output_image_rgb, cmap="gray")
+    axes[2].set_title(f"Lignes détectées ({stair_count} marches)")
+    axes[2].axis("off")
+
+    plt.show()
     """
     print(f"Nombre de marches détectées {image_path}: {stair_count}")
     return stair_count
 
-#detect_stairs("../data/train/Groupe1_Image3.jpg")
+#detect_stairs1("../data/train/Groupe1_Image3.jpg")

@@ -107,7 +107,7 @@ def detect_stairs_with_homography(image_path):
     angle = detect_dominant_angle(binary)
     print(f"Angle dominant détecté : {angle}°")
 
-    rotated_image = rotate_image(image, -angle) if abs(angle) > 10 else image
+    rotated_image = rotate_image(image, -angle) if abs(angle) > 75 else image
 
     # Détection finale avec affichage
     return detect_stairs(rotated_image)

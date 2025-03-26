@@ -17,7 +17,7 @@ def detect_stairs2(image_path):
     if image is None:
         raise FileNotFoundError(f"Impossible de charger l'image : {image_path}")
 
-    image = imutils.resize(image, width=500)
+    image = imutils.resize(image, width=300)
 
     # Convertir l'image en niveaux de gris
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
@@ -55,7 +55,7 @@ def detect_stairs2(image_path):
 
     # Fusionner les lignes proches
     merged_lines_y = []
-    threshold = 30  # Seuil pour considérer que deux lignes sont la même marche
+    threshold = 40  # Seuil pour considérer que deux lignes sont la même marche
 
     for y in detected_lines_y:
         if not merged_lines_y or abs(y - merged_lines_y[-1]) > threshold:

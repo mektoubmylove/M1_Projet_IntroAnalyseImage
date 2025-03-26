@@ -3,13 +3,19 @@ import os
 
 import cv2
 import numpy as np
+from collections import Counter
+
+from Methodes.combine_methods import compute_average_stairs, compute_majority_vote, hybrid
 
 from Methodes.findContours import findContours
-
-
+from Methodes.detectStairs2 import detect_stairs2 as dt2
+from Methodes.detectStairs3 import detect_stairs_with_homography as dt3
+from Methodes.detectStairs4 import detect_stairs_with_homography as dt4
+from Methodes.detectStairs5 import detect_stairs_with_homography as dt5
+from Methodes.detectStairs6 import detect_stairs_with_homography as dt6
 def update_json_with_predictions(train_dir, json_file, output_file):
     """
-    Parcourt le dossier val, applique findContours(), et met à jour gt.json avec les résultats.
+    Parcourt le dossier train, applique compute_average_methods(), et met à jour gt.json avec les résultats.
 
     :param train_dir: Chemin du dossier contenant les images d'entraînement.
     :param json_file: Fichier JSON contenant la vérité terrain (gt.json).
@@ -24,7 +30,7 @@ def update_json_with_predictions(train_dir, json_file, output_file):
 
     total_images = len(gt_dict)
     failed_images = 0  # Compteur d'images non traitées
-
+    methods = [dt2,dt3, dt4, dt5, dt6, findContours]
     # Parcourir toutes les images du dossier train
     for image_name in os.listdir(train_dir):
         image_path = os.path.join(train_dir, image_name)
@@ -34,7 +40,7 @@ def update_json_with_predictions(train_dir, json_file, output_file):
 
             try:
                 # Obtenir la prédiction du nombre de marches
-                predicted_values = findContours(image_path)
+                predicted_values = compute_average_stairs(image_path,methods)
 
                 # Vérifier si la sortie est un tuple et récupérer uniquement le nombre de marches
                 if isinstance(predicted_values, tuple):
@@ -102,10 +108,10 @@ def evaluate_predictions(json_file):
 # Exécution du script
 train_directory = "../data/test"
 ground_truth_json = "../gt.json"
-updated_json = "gt_result_val_findContours.json"
+updated_json = "gt_result_train_combine.json"
 
-# 1️⃣ Mise à jour des prédictions
+#  Mise à jour des prédictions
 update_json_with_predictions(train_directory, ground_truth_json, updated_json)
 
-# 2️⃣ Calcul des métriques
+#  Calcul des métriques
 evaluate_predictions(updated_json)

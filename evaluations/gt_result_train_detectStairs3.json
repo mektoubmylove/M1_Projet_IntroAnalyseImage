@@ -21,8 +21,8 @@
         {
             "image": "Groupe2_Image4.png",
             "actual_count": 6,
-            "predicted_count": 7,
-            "absolute_error": 1
+            "predicted_count": 12,
+            "absolute_error": 6
         },
         {
             "image": "Groupe2_Image5.jpeg",
@@ -39,8 +39,8 @@
         {
             "image": "Groupe2_Image7.jpeg",
             "actual_count": 10,
-            "predicted_count": 13,
-            "absolute_error": 3
+            "predicted_count": 8,
+            "absolute_error": 2
         },
         {
             "image": "Groupe2_Image8.jpg",
@@ -69,8 +69,8 @@
         {
             "image": "Groupe2_Image12.png",
             "actual_count": 7,
-            "predicted_count": 9,
-            "absolute_error": 2
+            "predicted_count": 10,
+            "absolute_error": 3
         },
         {
             "image": "Groupe2_Image13.png",
@@ -117,8 +117,8 @@
         {
             "image": "t3i7.jpg",
             "actual_count": 22,
-            "predicted_count": 12,
-            "absolute_error": 10
+            "predicted_count": 13,
+            "absolute_error": 9
         },
         {
             "image": "t3i8.jpg",
@@ -129,8 +129,8 @@
         {
             "image": "t3i9.jpg",
             "actual_count": 21,
-            "predicted_count": 6,
-            "absolute_error": 15
+            "predicted_count": 7,
+            "absolute_error": 14
         },
         {
             "image": "t3i10.jpg",
@@ -207,8 +207,8 @@
         {
             "image": "t3i22.png",
             "actual_count": 7,
-            "predicted_count": 7,
-            "absolute_error": 0
+            "predicted_count": 10,
+            "absolute_error": 3
         },
         {
             "image": "t3i23.jpg",
@@ -219,8 +219,8 @@
         {
             "image": "t3i24.jpg",
             "actual_count": 10,
-            "predicted_count": 12,
-            "absolute_error": 2
+            "predicted_count": 13,
+            "absolute_error": 3
         },
         {
             "image": "t3i25.jpg",
@@ -231,8 +231,8 @@
         {
             "image": "t3i26.jpg",
             "actual_count": 8,
-            "predicted_count": 7,
-            "absolute_error": 1
+            "predicted_count": 8,
+            "absolute_error": 0
         },
         {
             "image": "t3i27.jpg",
@@ -267,8 +267,8 @@
         {
             "image": "Groupe6_image2.jpg",
             "actual_count": 7,
-            "predicted_count": 11,
-            "absolute_error": 4
+            "predicted_count": 13,
+            "absolute_error": 6
         },
         {
             "image": "Groupe6_image3.jpg",
@@ -285,8 +285,8 @@
         {
             "image": "Groupe6_image5.jpg",
             "actual_count": 7,
-            "predicted_count": 9,
-            "absolute_error": 2
+            "predicted_count": 11,
+            "absolute_error": 4
         },
         {
             "image": "Groupe6_image6.jpg",
@@ -297,8 +297,8 @@
         {
             "image": "Groupe6_image7.jpg",
             "actual_count": 7,
-            "predicted_count": 14,
-            "absolute_error": 7
+            "predicted_count": 11,
+            "absolute_error": 4
         },
         {
             "image": "Groupe6_image8.jpg",
@@ -363,8 +363,8 @@
         {
             "image": "Groupe1_Image8.jpg",
             "actual_count": 17,
-            "predicted_count": 8,
-            "absolute_error": 9
+            "predicted_count": 12,
+            "absolute_error": 5
         },
         {
             "image": "Groupe1_Image9.jpg",
@@ -393,8 +393,8 @@
         {
             "image": "img3.png",
             "actual_count": 22,
-            "predicted_count": 9,
-            "absolute_error": 13
+            "predicted_count": 12,
+            "absolute_error": 10
         },
         {
             "image": "img4.jpg",
@@ -435,8 +435,8 @@
         {
             "image": "grp7img1.jpeg",
             "actual_count": 15,
-            "predicted_count": 10,
-            "absolute_error": 5
+            "predicted_count": 12,
+            "absolute_error": 3
         },
         {
             "image": "grp7img2.jpeg",
@@ -447,8 +447,8 @@
         {
             "image": "grp7img3.jpeg",
             "actual_count": 15,
-            "predicted_count": 9,
-            "absolute_error": 6
+            "predicted_count": 10,
+            "absolute_error": 5
         },
         {
             "image": "grp7img4.jpeg",
@@ -459,26 +459,26 @@
         {
             "image": "grp7img5.jpeg",
             "actual_count": 10,
-            "predicted_count": 10,
-            "absolute_error": 0
+            "predicted_count": 12,
+            "absolute_error": 2
         },
         {
             "image": "grp7img10.jpg",
             "actual_count": 10,
-            "predicted_count": 11,
-            "absolute_error": 1
+            "predicted_count": 12,
+            "absolute_error": 2
         },
         {
             "image": "grp7img11.jpg",
             "actual_count": 6,
-            "predicted_count": 10,
-            "absolute_error": 4
+            "predicted_count": 13,
+            "absolute_error": 7
         },
         {
             "image": "grp7img12.jpg",
             "actual_count": 22,
-            "predicted_count": 11,
-            "absolute_error": 11
+            "predicted_count": 9,
+            "absolute_error": 13
         },
         {
             "image": "Groupe5_image01.jpg",
@@ -537,8 +537,8 @@
         {
             "image": "Groupe5_image10.jpeg",
             "actual_count": 14,
-            "predicted_count": 7,
-            "absolute_error": 7
+            "predicted_count": 10,
+            "absolute_error": 4
         },
         {
             "image": "Groupe5_image11.jpeg",
@@ -567,8 +567,8 @@
         {
             "image": "Groupe5_image15.jpeg",
             "actual_count": 8,
-            "predicted_count": 11,
-            "absolute_error": 3
+            "predicted_count": 12,
+            "absolute_error": 4
         },
         {
             "image": "Groupe5_image16.jpeg",

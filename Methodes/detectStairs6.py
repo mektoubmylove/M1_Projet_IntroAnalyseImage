@@ -82,8 +82,9 @@ def detect_stairs_with_homography(image_path):
     print(f"Nombre de marches détectées : {num_stairs}")
 
     # Affichage des résultats avec subplots
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
     """
+    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
+    
     # Afficher les images dans les subplots
     axes[0].imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
     axes[0].set_title('Image Originale')

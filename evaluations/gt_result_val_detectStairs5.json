@@ -9,14 +9,14 @@
         {
             "image": "Groupe2_Image2.jpeg",
             "actual_count": 7,
-            "predicted_count": 8,
-            "absolute_error": 1
+            "predicted_count": 9,
+            "absolute_error": 2
         },
         {
             "image": "Groupe2_Image3.jpeg",
             "actual_count": 9,
-            "predicted_count": 6,
-            "absolute_error": 3
+            "predicted_count": 8,
+            "absolute_error": 1
         },
         {
             "image": "Groupe2_Image4.png",
@@ -27,8 +27,8 @@
         {
             "image": "Groupe2_Image5.jpeg",
             "actual_count": 8,
-            "predicted_count": 6,
-            "absolute_error": 2
+            "predicted_count": 5,
+            "absolute_error": 3
         },
         {
             "image": "Groupe2_Image6.jpeg",
@@ -81,8 +81,8 @@
         {
             "image": "t3i1.jpg",
             "actual_count": 11,
-            "predicted_count": 9,
-            "absolute_error": 2
+            "predicted_count": 7,
+            "absolute_error": 4
         },
         {
             "image": "t3i2.jpg",
@@ -273,8 +273,8 @@
         {
             "image": "Groupe6_image3.jpg",
             "actual_count": 11,
-            "predicted_count": 6,
-            "absolute_error": 5
+            "predicted_count": 8,
+            "absolute_error": 3
         },
         {
             "image": "Groupe6_image4.jpg",
@@ -315,8 +315,8 @@
         {
             "image": "Groupe6_image10.jpg",
             "actual_count": 8,
-            "predicted_count": 8,
-            "absolute_error": 0
+            "predicted_count": 9,
+            "absolute_error": 1
         },
         {
             "image": "Groupe1_Image1.jpg",

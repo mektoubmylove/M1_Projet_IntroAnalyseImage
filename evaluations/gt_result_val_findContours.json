@@ -51,8 +51,8 @@
         {
             "image": "Groupe2_Image9.jpg",
             "actual_count": 9,
-            "predicted_count": 8,
-            "absolute_error": 1
+            "predicted_count": 9,
+            "absolute_error": 0
         },
         {
             "image": "Groupe2_Image10.jpg",
@@ -243,8 +243,8 @@
         {
             "image": "t3i28.jpg",
             "actual_count": 8,
-            "predicted_count": 10,
-            "absolute_error": 2
+            "predicted_count": 8,
+            "absolute_error": 0
         },
         {
             "image": "t3i29.jpg",
@@ -321,8 +321,8 @@
         {
             "image": "Groupe1_Image1.jpg",
             "actual_count": 11,
-            "predicted_count": 11,
-            "absolute_error": 0
+            "predicted_count": 12,
+            "absolute_error": 1
         },
         {
             "image": "Groupe1_Image2.jpg",
@@ -369,8 +369,8 @@
         {
             "image": "Groupe1_Image9.jpg",
             "actual_count": 9,
-            "predicted_count": 7,
-            "absolute_error": 2
+            "predicted_count": 8,
+            "absolute_error": 1
         },
         {
             "image": "Groupe1_Image10.jpg",
@@ -399,8 +399,8 @@
         {
             "image": "img4.jpg",
             "actual_count": 37,
-            "predicted_count": 10,
-            "absolute_error": 27
+            "predicted_count": 12,
+            "absolute_error": 25
         },
         {
             "image": "img5.jpg",
@@ -411,8 +411,8 @@
         {
             "image": "img6.jpg",
             "actual_count": 11,
-            "predicted_count": 11,
-            "absolute_error": 0
+            "predicted_count": 12,
+            "absolute_error": 1
         },
         {
             "image": "img7.png",
@@ -501,8 +501,8 @@
         {
             "image": "Groupe5_image04.jpg",
             "actual_count": 6,
-            "predicted_count": 11,
-            "absolute_error": 5
+            "predicted_count": 10,
+            "absolute_error": 4
         },
         {
             "image": "Groupe5_image05.jpg",
@@ -525,8 +525,8 @@
         {
             "image": "Groupe5_image08.jpg",
             "actual_count": 14,
-            "predicted_count": 10,
-            "absolute_error": 4
+            "predicted_count": 11,
+            "absolute_error": 3
         },
         {
             "image": "Groupe5_image09.jpg",
@@ -543,8 +543,8 @@
         {
             "image": "Groupe5_image11.jpeg",
             "actual_count": 13,
-            "predicted_count": 7,
-            "absolute_error": 6
+            "predicted_count": 8,
+            "absolute_error": 5
         },
         {
             "image": "Groupe5_image12.jpeg",
@@ -555,8 +555,8 @@
         {
             "image": "Groupe5_image13.jpeg",
             "actual_count": 3,
-            "predicted_count": 8,
-            "absolute_error": 5
+            "predicted_count": 7,
+            "absolute_error": 4
         },
         {
             "image": "Groupe5_image14.jpeg",

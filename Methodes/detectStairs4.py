@@ -111,13 +111,13 @@ def detect_stairs_with_homography(image_path):
     if image is None:
         raise FileNotFoundError(f"Impossible de charger l'image : {image_path}")
 
-    image = imutils.resize(image, width=400)
+    image = imutils.resize(image, width=500)
     binary = preprocess_image(image)
 
     # Détection et correction de l'orientation
     angle = detect_dominant_angle(binary)
     print(f"Angle dominant détecté : {angle}°")
-    if abs(angle) > 5:
+    if abs(angle) > 50:
         image = rotate_image(image, -angle)
 
     # Détection finale des escaliers avec affichage

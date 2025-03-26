@@ -51,8 +51,8 @@
         {
             "image": "Groupe2_Image9.jpg",
             "actual_count": 9,
-            "predicted_count": 7,
-            "absolute_error": 2
+            "predicted_count": 8,
+            "absolute_error": 1
         },
         {
             "image": "Groupe2_Image10.jpg",
@@ -63,8 +63,8 @@
         {
             "image": "Groupe2_Image11.jpg",
             "actual_count": 9,
-            "predicted_count": 4,
-            "absolute_error": 5
+            "predicted_count": 5,
+            "absolute_error": 4
         },
         {
             "image": "Groupe2_Image12.png",
@@ -201,8 +201,8 @@
         {
             "image": "t3i21.jpeg",
             "actual_count": 14,
-            "predicted_count": 7,
-            "absolute_error": 7
+            "predicted_count": 9,
+            "absolute_error": 5
         },
         {
             "image": "t3i22.png",
@@ -243,8 +243,8 @@
         {
             "image": "t3i28.jpg",
             "actual_count": 8,
-            "predicted_count": 7,
-            "absolute_error": 1
+            "predicted_count": 8,
+            "absolute_error": 0
         },
         {
             "image": "t3i29.jpg",
@@ -411,8 +411,8 @@
         {
             "image": "img6.jpg",
             "actual_count": 11,
-            "predicted_count": 8,
-            "absolute_error": 3
+            "predicted_count": 9,
+            "absolute_error": 2
         },
         {
             "image": "img7.png",
@@ -555,8 +555,8 @@
         {
             "image": "Groupe5_image13.jpeg",
             "actual_count": 3,
-            "predicted_count": 7,
-            "absolute_error": 4
+            "predicted_count": 6,
+            "absolute_error": 3
         },
         {
             "image": "Groupe5_image14.jpeg",
@@ -579,8 +579,8 @@
         {
             "image": "Groupe5_image17.jpeg",
             "actual_count": 13,
-            "predicted_count": 7,
-            "absolute_error": 6
+            "predicted_count": 8,
+            "absolute_error": 5
         },
         {
             "image": "Groupe5_image18.jpeg",

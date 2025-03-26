@@ -52,7 +52,7 @@ def findContours(image_path):
     # Détecter l'angle dominant et corriger l'orientation
     angle = detect_dominant_angle(image)
     print(f"Angle de correction détecté : {angle:.2f}°")
-    corrected = rotate_image(image, -angle) if abs(angle) > 5 else image
+    corrected = rotate_image(image, -angle) if abs(angle) > 75 else image
 
     # Conversion en niveaux de gris et détection des bords
     gray = cv2.cvtColor(corrected, cv2.COLOR_BGR2GRAY)
@@ -63,7 +63,7 @@ def findContours(image_path):
     lines = cv2.HoughLinesP(edges, 1, np.pi / 180, threshold=35, minLineLength=75, maxLineGap=10)
 
     # Fusion des lignes détectées pour trouver les marches
-    merged_lines = merge_close_lines(lines, 60)
+    merged_lines = merge_close_lines(lines, 55)
 
     # Dessin des marches détectées sur l'image corrigée
     result = corrected.copy()
@@ -81,4 +81,4 @@ def findContours(image_path):
     return len(merged_lines)
 
 # Exécution du script
-# findContours("../data/train/Groupe1_Image6.jpg")
+#findContours("../data/train/t3i2.jpg")

@@ -15,8 +15,8 @@ def preprocess_image(image):
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY) if len(image.shape) == 3 else image
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
 
-    sobel_x = cv2.Sobel(blurred, cv2.CV_16S, 1, 0, ksize=5)
-    sobel_y = cv2.Sobel(blurred, cv2.CV_16S, 0, 1, ksize=5)
+    sobel_x = cv2.Sobel(blurred, cv2.CV_16S, 1, 0, ksize=3)
+    sobel_y = cv2.Sobel(blurred, cv2.CV_16S, 0, 1, ksize=3)
     sobel_combined = cv2.addWeighted(cv2.convertScaleAbs(sobel_x), 0.5, cv2.convertScaleAbs(sobel_y), 0.5, 0)
 
     _, binary = cv2.threshold(sobel_combined, 0, 255, cv2.THRESH_BINARY | cv2.THRESH_OTSU)
@@ -66,7 +66,7 @@ def detect_stairs(image):
     detected_lines_y.sort()
     merged_lines_y = []
     for y in detected_lines_y:
-        if not merged_lines_y or abs(y - merged_lines_y[-1]) > 40:
+        if not merged_lines_y or abs(y - merged_lines_y[-1]) > 20:
             merged_lines_y.append(y)
 
     #  Dessiner uniquement les lignes fusionnées (celles qui restent après fusion)

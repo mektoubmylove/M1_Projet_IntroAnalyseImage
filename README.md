@@ -19,9 +19,11 @@ L’objectif principal est de développer une méthode fiable pour :
 
 ## 📂 Structure du Projet
 - **📁 data/** : Contient les images d’escalier avec annotations du nombre de marches.
-- **📁 Méthodes/** : Code source pour la détection et le comptage des marches.
-- **📁 results/** : Résultats des tests et évaluations.
-- **📜 README.md** : Documentation du projet.
+- **📁 Méthodes/** : Plusieurs approches pour la détection et le comptage des marches (readme inclus)
+- **📁 evaluations/** : Résultats des tests et évaluations sur les ensembles train et val (readme inclus)
+- **📁 randomForest/** : entrainement de modeles à partir des features qu'on a obtenu via nos méthodes
+- **📜 split.py**: divise un ensemble d'images en train (60%), validation (20%) et test (20%) 
+- **📜 utils.py**: fonctions implémentés sans opencv (composante connexe, gaussianblur etc )
 
 ## 🛠️ Méthodologie
 1. **Construction d’un jeu de données**
@@ -46,5 +48,5 @@ L’objectif principal est de développer une méthode fiable pour :
 - Matplotlib
 
 ### Exécution TODO
-- python src/TODO.py --image chemin/vers/image.jpg
+- 
 

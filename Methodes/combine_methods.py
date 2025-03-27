@@ -28,7 +28,7 @@ def compute_average_stairs(image_path, methods):
             if isinstance(count, (int, float)):
                 predictions.append(count)
             else:
-                print(f"⚠️ {method.__name__} a retourné un format invalide : {count}")
+                print(f" {method.__name__} a retourné un format invalide : {count}")
 
         except Exception as e:
             print(f"Erreur avec {method.__name__} : {e}")
@@ -53,7 +53,7 @@ def compute_majority_vote(image_path, methods):
             if isinstance(count, (int, float)):
                 predictions.append(int(count))
             else:
-                print(f"⚠️ {method.__name__} a retourné un format invalide : {count}")
+                print(f" {method.__name__} a retourné un format invalide : {count}")
 
         except Exception as e:
             print(f"Erreur avec {method.__name__} : {e}")

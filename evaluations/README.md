@@ -21,4 +21,4 @@
 
 La méthode findContours offre les meilleures performances avec une erreur moyenne absolue (MAE) de 3.81 en entraînement et 3.85 en validation, surpassant les autres approches. Les méthodes detectStairs3, detectStairs4, detectStairs5, et detectStairs6 obtiennent également de bons résultats, tandis que detectStairs1 est nettement moins performante avec une MAE beaucoup plus élevée.
 
-Sur l'ensemble de test, jamais vu avant par notre méthode, findContours obtient un MAE de 3.55
+Sur l'ensemble de test, jamais vu avant par notre méthode, findContours obtient un MAE de 3.55 (contre 3.98 pour compute_average_stairs)

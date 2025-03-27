@@ -31,7 +31,10 @@ L’objectif principal est de développer une méthode fiable pour :
    - Annotation manuelle du nombre de marches pour chaque image (vérité terrain).
 
 2. **Détection et Comptage des Marches**
-   - TODO
+   - Dans le dossier methods/, nous avons défini plusieurs méthodes de détection et de comptage des marches, chacune utilisant des approches différentes ou des ajustements au niveau des parametres pour extraire des caractéristiques à partir des images. 
+   - Afin d'améliorer la robustesse des prédictions, nous avons combiné ces différentes méthodes à l'aide, entre autres, de la fonction compute_average_stairs, qui calcule la moyenne des résultats des différentes méthodes pour obtenir une estimation plus fiable. 
+   - En complément, nous avons également entraîné plusieurs Random Forest Regressors dans le dossier randomForest afin d'exploiter des modèles d'apprentissage supervisé pour affiner encore davantage les prédictions.
+   - plus d'informations dans les readme correspondant
 
 3. **Évaluation des Performances**
    - Comparaison des résultats du programme avec les annotations manuelles.

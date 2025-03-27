@@ -124,15 +124,68 @@ Les résultats sont enregistrés dans un fichier CSV ("features.csv").
 
     L'erreur absolue entre la valeur réelle et la prédite.
 
+### extract_features
+Extraction des caractéristiques des images
+- L'image est convertie en niveaux de gris pour simplifier l'analyse.
+- Une détection des contours est effectuée à l'aide de l'algorithme Canny pour identifier les bords dans l'image. 
+- Ensuite, la transformée de Hough est utilisée pour détecter les lignes dans l'image. En particulier, les lignes horizontales (qui pourraient correspondre aux marches de l'escalier) sont isolées. 
+- Plusieurs statistiques sont calculées à partir des lignes détectées : le nombre de lignes horizontales, leur position moyenne sur l'axe vertical, et l'écart-type de ces positions. Ces statistiques servent de caractéristiques pour le modèle.
+
+Préparation des données d'entraînement
+- Les données extraites des images, c'est-à-dire les caractéristiques (comme le nombre de lignes horizontales et leur position) et les annotations réelles (le nombre de marches réel), sont collectées dans deux tableaux : X pour les caractéristiques et y pour les étiquettes (nombre de marches). 
+Normalisation des caractéristiques
+- Avant de procéder à l'entraînement du modèle, les caractéristiques extraites sont normalisées à l'aide de la méthode StandardScaler de la bibliothèque scikit-learn.
+
+Entraînement du modèle avec Leave-One-Out Cross-Validation (LOO)
+
+- Une approche de validation croisée Leave-One-Out (LOO) est utilisée pour entraîner et évaluer le modèle. L'idée de LOO est que pour chaque itération, une seule image est utilisée comme test, tandis que le reste des images est utilisé pour entraîner le modèle. Cela permet de tester la capacité du modèle à généraliser à de nouvelles données tout en utilisant efficacement toutes les images disponibles pour l'entraînement.
+
+- Pendant chaque itération :
+
+  - Le modèle Random Forest est entraîné sur l'ensemble des données d'entraînement et testé sur une seule image (celle qui a été mise de côté).
+
+  - L'erreur entre la prédiction du modèle et la vérité terrain (le nombre réel de marches) est calculée. L'erreur absolue est utilisée comme mesure de la performance du modèle.
+
+### extract_histogram_features
+
+Extraction des caractéristiques des images
+- Redimensionnement de l'image : Chaque image est redimensionnée à une hauteur de 1024 pixels. Cela permet de standardiser les tailles d'images avant leur analyse.
+- Conversion en niveaux de gris : L'image est convertie en une image en niveaux de gris, ce qui est une étape essentielle avant toute détection de contours ou de lignes.
+- Détection des contours : La méthode cv2.Canny est utilisée pour détecter les contours dans l'image. Cela permet de repérer les zones de changement significatif dans l'image.
+- Détection des lignes : Ensuite, la méthode cv2.HoughLinesP est utilisée pour détecter les lignes dans l'image (en particulier les lignes horizontales représentant les marches d'escalier).
+- Création d'un histogramme : Un histogramme est construit pour chaque image. Pour chaque ligne détectée, la position en y (coordonnée verticale) des lignes est utilisée pour déterminer dans quel "bin" de l'histogramme cette ligne doit être comptabilisée. Le but est de créer un résumé de la répartition verticale des lignes détectées.
+
+La sortie de cette fonction est un histogramme, qui est un vecteur de caractéristiques représentant l'image.
+
+Normalisation des données :
+- La normalisation des caractéristiques est effectuée à l'aide de StandardScaler de sklearn. Cela garantit que chaque caractéristique a une moyenne de 0 et un écart-type de 1
+
+Entraînement du modèle avec Leave-One-Out Cross-Validation (LOO) :
+
+- La méthode Leave-One-Out Cross-Validation (LOO) est utilisée pour évaluer la performance du modèle.
+- Dans chaque itération, une image est utilisée comme ensemble de test, tandis que toutes les autres sont utilisées pour entraîner le modèle.
+- Un Random Forest Regressor est créé avec 1000 arbres (n_estimators=1000), et le modèle est entraîné sur les données d'entraînement à chaque itération.
+- Le modèle fait ensuite des prédictions sur l'image test et l'erreur absolue est calculée (la différence entre le nombre réel de marches et la prédiction).
+
+Calcul de l'erreur absolue moyenne (MAE) :
+
+- À la fin de toutes les itérations de la validation croisée, l'erreur absolue moyenne (MAE) est calculée en moyennant toutes les erreurs absolues obtenues pour chaque test. 
+- Cette métrique permet de mesurer la précision du modèle : plus la MAE est faible, mieux le modèle prédit le nombre de marches.
+
 ### Comparaison des performances des modèles
 
-| Projet                        | MAE après entraînement | MAE sur ensemble de test |
-|-------------------------------|------------------------|--------------------------|
-| projectImageDetectStairs3     | 4.08                   | 5.16                     |
-| projectImageDetectStairs5     | 1.30                   | 5.61                     |
+| Projet                     | MAE après entraînement | MAE sur ensemble de test |
+|----------------------------|------------------------|--------------------------|
+| projectImageDetectStairs3  | 4.08                   | 5.16                     |
+| projectImageDetectStairs5  | 1.30                   | 5.61                     |
+| extract_features           | 1.74                   | 5.17                     |
+| extract_histogram_features | 1.76                   | 3.89                     |
 
 ###  Analyse :
 - **projectImageDetectStairs5** a une meilleure précision après entraînement (**MAE = 1.30** contre **4.08** pour projectImageDetectStairs3).
 - Cependant, il se généralise légèrement moins bien en test (**MAE = 5.61** contre **5.16**), ce qui peut indiquer un surajustement.
+- extract_features et extract_histogram_features montrent des résultats assez proches, avec des MAE respectivement de 1.74 et 1.76 après l'entraînement, mais une meilleure généralisation sur l'ensemble de test, où leurs MAE sont respectivement 5.17 et 3.89. 
 
-📌 **Conclusion** : Bien que projectImageDetectStairs5 soit plus précis sur l’entraînement, son score de test suggère une  perte de généralisation.
+ **Conclusion** : Bien que projectImageDetectStairs5 soit plus précis sur l’entraînement, son score de test plus élevé indique une perte de généralisation (surajustement).
+
+Les méthodes comme extract_features et extract_histogram_features semblent être plus équilibrées en termes de généralisation, offrant des résultats plus stables sur l’ensemble de test, même si elles ne sont pas aussi précises que projectImageDetectStairs5 sur les données d’entraînement.

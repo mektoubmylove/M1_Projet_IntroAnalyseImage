@@ -189,13 +189,45 @@ Fusion des Lignes Proches
 - Cela évite de compter plusieurs fois la même marche
 
 
-Correction d’Orientation (Homographie)
+Correction d’Orientation 
 - Calcul de l’angle médian des lignes détectées
 - Rotation de l’image pour aligner les marches horizontalement
 
 
 ![t3i2](../assets/findContours.png)
+### findContours2
 
+Correction de Perspective
+
+    Sélection de quatre points sources (src_pts) représentant les coins de l’escalier dans l’image d’origine
+
+    Définition des quatre points cibles (dst_pts) pour obtenir une vue redressée
+
+    Calcul de la matrice d’homographie avec cv2.findHomography()
+
+    Application de la transformation avec cv2.warpPerspective() pour rectifier la perspective
+
+Correction de l’Inclinaison et detection de marches
+
+    Conversion de l’image en niveaux de gris
+
+    Détection des contours avec l’algorithme de Canny (cv2.Canny())
+
+    Extraction des lignes dominantes via cv2.HoughLinesP()
+
+    Calcul de l’angle dominant des lignes avec np.arctan2()
+
+    Si l’angle dépasse un seuil critique, rotation de l’image avec cv2.getRotationMatrix2D() et cv2.warpAffine()
+
+
+Fusion des Lignes Proches
+
+    Tri des lignes détectées en fonction de leur position verticale
+
+    Fusion des lignes trop proches (moins de 55 pixels) pour éviter les doublons
+
+    Création d’une liste de lignes représentant les marches finales
+![t3i22](../assets/findContours2.png)
 ### findContoursRectangle1
 Chargement et redimensionnement
 - L'image est chargée avec OpenCV et redimensionnée pour une meilleure analyse.

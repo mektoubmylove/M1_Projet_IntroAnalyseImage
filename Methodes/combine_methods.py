@@ -9,6 +9,7 @@ from Methodes.detectStairs3 import detect_stairs_with_homography as dt3
 from Methodes.detectStairs4 import detect_stairs_with_homography as dt4
 from Methodes.detectStairs5 import detect_stairs_with_homography as dt5
 from Methodes.detectStairs6 import detect_stairs_with_homography as dt6
+from Methodes.find_Contours_Homographie import findContours2
 
 
 def compute_average_stairs(image_path, methods):
@@ -110,7 +111,7 @@ def hybrid(image_path, methods, threshold=2):
     return round(final_prediction)
 # Exemple d'utilisation
 #image_path = "../data/train/Groupe1_Image2.jpg"  # Remplace avec ton image
-#methods = [dt2,dt3, dt4, dt5, dt6, findContours]  # Liste des méthodes à tester
+#methods = [dt2,dt3, dt4, dt5, dt6, findContours,findContours2]  # Liste des méthodes à tester
 
 #average_stairs = compute_average_stairs(image_path, methods)
 #print(f"Nombre moyen de marches détectées : {average_stairs:.2f}")

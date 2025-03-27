@@ -41,7 +41,7 @@ L’objectif principal est de développer une méthode fiable pour :
    - Calcul de métriques comme la MAE.
 
 4. **Critique et Amélioration**
-   - TODO
+   - ne repère pas bien les marches pour des images TODO
 
 ## 🚀 Installation et Utilisation
 ### 📥 Prérequis

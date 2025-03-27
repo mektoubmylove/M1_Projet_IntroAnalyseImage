@@ -3,8 +3,8 @@
         {
             "image": "Groupe2_Image1.jpeg",
             "actual_count": 4,
-            "predicted_count": 9.666666666666666,
-            "absolute_error": 5.666666666666666
+            "predicted_count": 9.0,
+            "absolute_error": 5.0
         },
         {
             "image": "Groupe2_Image2.jpeg",
@@ -51,8 +51,8 @@
         {
             "image": "Groupe2_Image9.jpg",
             "actual_count": 9,
-            "predicted_count": 9.5,
-            "absolute_error": 0.5
+            "predicted_count": 9.428571428571429,
+            "absolute_error": 0.4285714285714288
         },
         {
             "image": "Groupe2_Image10.jpg",
@@ -63,8 +63,8 @@
         {
             "image": "Groupe2_Image11.jpg",
             "actual_count": 9,
-            "predicted_count": 6.166666666666667,
-            "absolute_error": 2.833333333333333
+            "predicted_count": 5.857142857142857,
+            "absolute_error": 3.1428571428571432
         },
         {
             "image": "Groupe2_Image12.png",
@@ -153,14 +153,14 @@
         {
             "image": "t3i13.jpg",
             "actual_count": 4,
-            "predicted_count": 7.0,
-            "absolute_error": 3.0
+            "predicted_count": 6.714285714285714,
+            "absolute_error": 2.7142857142857144
         },
         {
             "image": "t3i14.jpeg",
             "actual_count": 4,
-            "predicted_count": 7.166666666666667,
-            "absolute_error": 3.166666666666667
+            "predicted_count": 6.857142857142857,
+            "absolute_error": 2.8571428571428568
         },
         {
             "image": "t3i15.jpg",
@@ -195,14 +195,14 @@
         {
             "image": "t3i20.png",
             "actual_count": 2,
-            "predicted_count": 5.333333333333333,
-            "absolute_error": 3.333333333333333
+            "predicted_count": 4.714285714285714,
+            "absolute_error": 2.7142857142857144
         },
         {
             "image": "t3i21.jpeg",
             "actual_count": 14,
-            "predicted_count": 11.666666666666666,
-            "absolute_error": 2.333333333333334
+            "predicted_count": 11.428571428571429,
+            "absolute_error": 2.571428571428571
         },
         {
             "image": "t3i22.png",
@@ -243,8 +243,8 @@
         {
             "image": "t3i28.jpg",
             "actual_count": 8,
-            "predicted_count": 10.166666666666666,
-            "absolute_error": 2.166666666666666
+            "predicted_count": 9.857142857142858,
+            "absolute_error": 1.8571428571428577
         },
         {
             "image": "t3i29.jpg",
@@ -291,8 +291,8 @@
         {
             "image": "Groupe6_image6.jpg",
             "actual_count": 9,
-            "predicted_count": 10.833333333333334,
-            "absolute_error": 1.833333333333334
+            "predicted_count": 10.714285714285714,
+            "absolute_error": 1.7142857142857135
         },
         {
             "image": "Groupe6_image7.jpg",
@@ -321,8 +321,8 @@
         {
             "image": "Groupe1_Image1.jpg",
             "actual_count": 11,
-            "predicted_count": 12.666666666666666,
-            "absolute_error": 1.666666666666666
+            "predicted_count": 12.571428571428571,
+            "absolute_error": 1.5714285714285712
         },
         {
             "image": "Groupe1_Image2.jpg",
@@ -339,14 +339,14 @@
         {
             "image": "Groupe1_Image4.jpg",
             "actual_count": 12,
-            "predicted_count": 11.0,
-            "absolute_error": 1.0
+            "predicted_count": 10.857142857142858,
+            "absolute_error": 1.1428571428571423
         },
         {
             "image": "Groupe1_Image5.jpg",
             "actual_count": 12,
-            "predicted_count": 10.5,
-            "absolute_error": 1.5
+            "predicted_count": 10.285714285714286,
+            "absolute_error": 1.7142857142857135
         },
         {
             "image": "Groupe1_Image6.jpg",
@@ -369,8 +369,8 @@
         {
             "image": "Groupe1_Image9.jpg",
             "actual_count": 9,
-            "predicted_count": 9.333333333333334,
-            "absolute_error": 0.3333333333333339
+            "predicted_count": 9.285714285714286,
+            "absolute_error": 0.2857142857142865
         },
         {
             "image": "Groupe1_Image10.jpg",
@@ -399,8 +399,8 @@
         {
             "image": "img4.jpg",
             "actual_count": 37,
-            "predicted_count": 9.333333333333334,
-            "absolute_error": 27.666666666666664
+            "predicted_count": 9.571428571428571,
+            "absolute_error": 27.42857142857143
         },
         {
             "image": "img5.jpg",
@@ -411,8 +411,8 @@
         {
             "image": "img6.jpg",
             "actual_count": 11,
-            "predicted_count": 9.833333333333334,
-            "absolute_error": 1.166666666666666
+            "predicted_count": 10.0,
+            "absolute_error": 1.0
         },
         {
             "image": "img7.png",
@@ -501,8 +501,8 @@
         {
             "image": "Groupe5_image04.jpg",
             "actual_count": 6,
-            "predicted_count": 10.0,
-            "absolute_error": 4.0
+            "predicted_count": 10.142857142857142,
+            "absolute_error": 4.142857142857142
         },
         {
             "image": "Groupe5_image05.jpg",
@@ -525,8 +525,8 @@
         {
             "image": "Groupe5_image08.jpg",
             "actual_count": 14,
-            "predicted_count": 10.166666666666666,
-            "absolute_error": 3.833333333333334
+            "predicted_count": 10.285714285714286,
+            "absolute_error": 3.7142857142857135
         },
         {
             "image": "Groupe5_image09.jpg",
@@ -555,8 +555,8 @@
         {
             "image": "Groupe5_image13.jpeg",
             "actual_count": 3,
-            "predicted_count": 9.166666666666666,
-            "absolute_error": 6.166666666666666
+            "predicted_count": 8.714285714285714,
+            "absolute_error": 5.7142857142857135
         },
         {
             "image": "Groupe5_image14.jpeg",
@@ -579,8 +579,8 @@
         {
             "image": "Groupe5_image17.jpeg",
             "actual_count": 13,
-            "predicted_count": 9.666666666666666,
-            "absolute_error": 3.333333333333334
+            "predicted_count": 9.571428571428571,
+            "absolute_error": 3.428571428571429
         },
         {
             "image": "Groupe5_image18.jpeg",

@@ -39,6 +39,7 @@ L’objectif principal est de développer une méthode fiable pour :
 3. **Évaluation des Performances**
    - Comparaison des résultats du programme avec les annotations manuelles.
    - Calcul de métriques comme la MAE.
+   - 3.25 sur l'ensemble de test pour la méthode find_Contours_Homographie (voir evaluations/readme pour plus de résultat)
 
 4. **Critique et Amélioration**
    - ne repère pas bien les marches pour des images TODO

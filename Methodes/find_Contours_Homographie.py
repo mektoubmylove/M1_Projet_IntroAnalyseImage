@@ -96,7 +96,18 @@ def findContours2(image_path):
     gray = cv2.cvtColor(corrected, cv2.COLOR_BGR2GRAY)
     blurred = cv2.GaussianBlur(gray, (5, 5), 0)
     edges = cv2.Canny(blurred, 50, 150)
+
+    # Convertir l'image des contours Canny en image couleur pour pouvoir dessiner en rouge
+    color_edges = cv2.cvtColor(edges, cv2.COLOR_GRAY2BGR)
+
+    # Appliquer HoughLinesP pour détecter les lignes
     lines = cv2.HoughLinesP(edges, 1, np.pi / 180, threshold=30, minLineLength=75, maxLineGap=10)
+
+    # Dessiner les lignes en rouge sur l'image couleur des contours Canny
+    if lines is not None:
+        for line in lines:
+            x1, y1, x2, y2 = line[0]
+            cv2.line(color_edges, (x1, y1), (x2, y2), (0, 0, 255), 2)  # Lignes rouges
 
     # Fusion des lignes détectées pour repérer les marches
     merged_lines = merge_close_lines(lines, 55)
@@ -109,25 +120,34 @@ def findContours2(image_path):
     cv2.putText(result, f"Marches: {len(merged_lines)}", (20, 40),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
+    # Affichage des résultats avec Matplotlib
+    fig, axes = plt.subplots(1, 4, figsize=(20, 5))
 
-    fig, axes = plt.subplots(1, 3, figsize=(15, 5))
-    """
+    # Affichage de l'image originale
     axes[0].imshow(cv2.cvtColor(image, cv2.COLOR_BGR2RGB))
     axes[0].set_title('Image Originale')
     axes[0].axis('off')
 
+    # Affichage de l'image après homographie
     axes[1].imshow(cv2.cvtColor(homography_image, cv2.COLOR_BGR2RGB))
     axes[1].set_title('Après Homographie')
     axes[1].axis('off')
 
-    axes[2].imshow(cv2.cvtColor(result, cv2.COLOR_BGR2RGB))
-    axes[2].set_title('Marches Détectées')
+    # Affichage de l'image avec les contours détectés par Canny et les lignes de Hough en rouge
+    axes[2].imshow(cv2.cvtColor(color_edges, cv2.COLOR_BGR2RGB))
+    axes[2].set_title('Contours Canny + Lignes Hough (rouge)')
     axes[2].axis('off')
+
+    # Affichage des marches détectées
+    axes[3].imshow(cv2.cvtColor(result, cv2.COLOR_BGR2RGB))
+    axes[3].set_title('Marches Détectées')
+    axes[3].axis('off')
 
     plt.tight_layout()
     plt.show()
-    """
+
     return len(merged_lines)
 
+
 # Exécution du script
-#findContours2("../data/train/t3i22.png")
+findContours2("../data/train/t3i22.png")

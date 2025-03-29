@@ -42,15 +42,30 @@ L’objectif principal est de développer une méthode fiable pour :
    - 3.25 sur l'ensemble de test pour la méthode find_Contours_Homographie (voir evaluations/readme pour plus de résultat)
 
 4. **Critique et Amélioration**
-   - ne repère pas bien les marches pour des images TODO
-
-## 🚀 Installation et Utilisation
+   - Le programme fonctionne bien pour détecter les marches dans les images où les escaliers sont bien centrés et clairement visibles. 
+   - Il parvient à identifier les contours des marches et à les distinguer avec précision. 
+   - Cependant, il rencontre des difficultés lorsque les escaliers présentent une forte inclinaison, ce qui peut fausser la détection des lignes et rendre l’identification des marches moins fiable. 
+   - De plus, lorsque les escaliers comportent un grand nombre de marches, le programme peut avoir du mal à différencier correctement chaque marche, entraînant  des erreurs/des détections incomplètes.
+   
+   - Meilleure correction de perspective : Ajuster plus finement l'homographie pour que les escaliers soient bien alignés avant détection.
+   - Amélioration du seuillage et des contours : Tester d'autres techniques que Otsu + Canny, comme des filtres adaptatifs ou des approches basées sur des réseaux neuronaux.
+   
+## 🚀Utilisation
 ### 📥 Prérequis
 - Python 3.x
 - OpenCV
 - NumPy
 - Matplotlib
 
-### Exécution TODO
-- 
+### Exécution 
+- Dans /evaluations/*
+- remplacer 
+  >train_directory = "../data/train 
+
+  >ground_truth_json = "../gt.json 
+  
+   par le chemin de votre dataset et de votre vérité terrain
+- ou lancer directement l'execution de la méthode de votre choix depuis l'IDE
+
+   
 

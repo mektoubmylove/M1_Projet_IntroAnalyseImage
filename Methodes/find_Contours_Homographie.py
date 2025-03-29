@@ -120,6 +120,7 @@ def findContours2(image_path):
     cv2.putText(result, f"Marches: {len(merged_lines)}", (20, 40),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
 
+    """
     # Affichage des résultats avec Matplotlib
     fig, axes = plt.subplots(1, 4, figsize=(20, 5))
 
@@ -145,9 +146,9 @@ def findContours2(image_path):
 
     plt.tight_layout()
     plt.show()
-
+    """
     return len(merged_lines)
 
 
 # Exécution du script
-findContours2("../data/train/t3i22.png")
+#findContours2("../data/train/t3i22.png")

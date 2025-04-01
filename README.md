@@ -18,7 +18,7 @@ L’objectif principal est de développer une méthode fiable pour :
 
 
 ## 📂 Structure du Projet
-- **📁 data/** : Contient les images d’escalier avec annotations du nombre de marches.
+- **📁 data/** : Contient les images d’escalier.
 - **📁 Méthodes/** : Plusieurs approches pour la détection et le comptage des marches (readme inclus)
 - **📁 evaluations/** : Résultats des tests et évaluations sur les ensembles train et val (readme inclus)
 - **📁 randomForest/** : entrainement de modeles à partir des features qu'on a obtenu via nos méthodes
@@ -33,7 +33,7 @@ L’objectif principal est de développer une méthode fiable pour :
 2. **Détection et Comptage des Marches**
    - Dans le dossier methods/, nous avons défini plusieurs méthodes de détection et de comptage des marches, chacune utilisant des approches différentes ou des ajustements au niveau des parametres pour extraire des caractéristiques à partir des images. 
    - Afin d'améliorer la robustesse des prédictions, nous avons combiné ces différentes méthodes à l'aide, entre autres, de la fonction compute_average_stairs, qui calcule la moyenne des résultats des différentes méthodes pour obtenir une estimation plus fiable. 
-   - En complément, nous avons également entraîné plusieurs Random Forest Regressors dans le dossier randomForest afin d'exploiter des modèles d'apprentissage supervisé pour affiner encore davantage les prédictions.
+   - En complément, nous avons également entraîné plusieurs Random Forest Regressors dans le dossier randomForest .
    - plus d'informations dans les readme correspondant
 
 3. **Évaluation des Performances**
@@ -48,7 +48,7 @@ L’objectif principal est de développer une méthode fiable pour :
    - De plus, lorsque les escaliers comportent un grand nombre de marches, le programme peut avoir du mal à différencier correctement chaque marche, entraînant  des erreurs/des détections incomplètes.
    
    - Meilleure correction de perspective : Ajuster plus finement l'homographie pour que les escaliers soient bien alignés avant détection.
-   - Amélioration du seuillage et des contours : Tester d'autres techniques que Otsu + Canny, comme des filtres adaptatifs ou des approches basées sur des réseaux neuronaux.
+   - Amélioration du seuillage et des contours : Tester d'autres techniques que Otsu + Canny, comme des filtres adaptatifs ou des approches basées sur des réseaux de neurones.
    
 ## 🚀Utilisation
 ### 📥 Prérequis

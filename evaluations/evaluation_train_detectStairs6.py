@@ -103,8 +103,6 @@ train_directory = "../data/train"
 ground_truth_json = "../gt.json"
 updated_json = "gt_result_train_detectStairs6.json"
 
-# 1️⃣ Mise à jour des prédictions
 update_json_with_predictions(train_directory, ground_truth_json, updated_json)
 
-# 2️⃣ Calcul des métriques
 evaluate_predictions(updated_json)

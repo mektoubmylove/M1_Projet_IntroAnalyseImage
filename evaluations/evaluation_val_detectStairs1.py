@@ -93,13 +93,10 @@ def evaluate_predictions(json_file):
         return None, None
 
 
-# Exécution du script
 train_directory = "../data/val"
 ground_truth_json = "../gt.json"
 updated_json = "gt_result_val_detectStairs1.json"
 
-#  Mise à jour des prédictions
 update_json_with_predictions(train_directory, ground_truth_json, updated_json)
 
-# Calcul des métriques
 evaluate_predictions(updated_json)

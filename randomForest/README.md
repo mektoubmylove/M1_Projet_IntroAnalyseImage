@@ -132,7 +132,7 @@ Extraction des caractéristiques des images
 - Plusieurs statistiques sont calculées à partir des lignes détectées : le nombre de lignes horizontales, leur position moyenne sur l'axe vertical, et l'écart-type de ces positions. Ces statistiques servent de caractéristiques pour le modèle.
 
 Préparation des données d'entraînement
-- Les données extraites des images, c'est-à-dire les caractéristiques (comme le nombre de lignes horizontales et leur position) et les annotations réelles (le nombre de marches réel), sont collectées dans deux tableaux : X pour les caractéristiques et y pour les étiquettes (nombre de marches). 
+- Les données extraites des images, c'est-à-dire les caractéristiques (comme le nombre de lignes horizontales et leur position) et les annotations réelles sont collectées dans deux tableaux : X pour les caractéristiques et y pour les étiquettes  
 Normalisation des caractéristiques
 - Avant de procéder à l'entraînement du modèle, les caractéristiques extraites sont normalisées à l'aide de la méthode StandardScaler de la bibliothèque scikit-learn.
 
@@ -144,7 +144,7 @@ Entraînement du modèle avec Leave-One-Out Cross-Validation (LOO)
 
   - Le modèle Random Forest est entraîné sur l'ensemble des données d'entraînement et testé sur une seule image (celle qui a été mise de côté).
 
-  - L'erreur entre la prédiction du modèle et la vérité terrain (le nombre réel de marches) est calculée. L'erreur absolue est utilisée comme mesure de la performance du modèle.
+  - L'erreur entre la prédiction du modèle et la vérité terrain est calculée. L'erreur absolue est utilisée comme mesure de la performance du modèle.
 
 ### extract_histogram_features
 
@@ -152,8 +152,8 @@ Extraction des caractéristiques des images
 - Redimensionnement de l'image : Chaque image est redimensionnée à une hauteur de 1024 pixels. Cela permet de standardiser les tailles d'images avant leur analyse.
 - Conversion en niveaux de gris : L'image est convertie en une image en niveaux de gris, ce qui est une étape essentielle avant toute détection de contours ou de lignes.
 - Détection des contours : La méthode cv2.Canny est utilisée pour détecter les contours dans l'image. Cela permet de repérer les zones de changement significatif dans l'image.
-- Détection des lignes : Ensuite, la méthode cv2.HoughLinesP est utilisée pour détecter les lignes dans l'image (en particulier les lignes horizontales représentant les marches d'escalier).
-- Création d'un histogramme : Un histogramme est construit pour chaque image. Pour chaque ligne détectée, la position en y (coordonnée verticale) des lignes est utilisée pour déterminer dans quel "bin" de l'histogramme cette ligne doit être comptabilisée. Le but est de créer un résumé de la répartition verticale des lignes détectées.
+- Détection des lignes : Ensuite, la méthode cv2.HoughLinesP est utilisée pour détecter les lignes dans l'image 
+- Création d'un histogramme : Un histogramme est construit pour chaque image. Pour chaque ligne détectée, la position en y des lignes est utilisée pour déterminer dans quel "bin" de l'histogramme cette ligne doit être comptabilisée. Le but est de créer un résumé de la répartition verticale des lignes détectées.
 
 La sortie de cette fonction est un histogramme, qui est un vecteur de caractéristiques représentant l'image.
 
@@ -165,11 +165,11 @@ Entraînement du modèle avec Leave-One-Out Cross-Validation (LOO) :
 - La méthode Leave-One-Out Cross-Validation (LOO) est utilisée pour évaluer la performance du modèle.
 - Dans chaque itération, une image est utilisée comme ensemble de test, tandis que toutes les autres sont utilisées pour entraîner le modèle.
 - Un Random Forest Regressor est créé avec 1000 arbres (n_estimators=1000), et le modèle est entraîné sur les données d'entraînement à chaque itération.
-- Le modèle fait ensuite des prédictions sur l'image test et l'erreur absolue est calculée (la différence entre le nombre réel de marches et la prédiction).
+- Le modèle fait ensuite des prédictions sur l'image test et l'erreur absolue est calculée .
 
 Calcul de l'erreur absolue moyenne (MAE) :
 
-- À la fin de toutes les itérations de la validation croisée, l'erreur absolue moyenne (MAE) est calculée en moyennant toutes les erreurs absolues obtenues pour chaque test. 
+- À la fin de toutes les itérations de la validation croisée, l'erreur absolue moyenne est calculée en moyennant toutes les erreurs absolues obtenues pour chaque test. 
 - Cette métrique permet de mesurer la précision du modèle : plus la MAE est faible, mieux le modèle prédit le nombre de marches.
 
 ### Comparaison des performances des modèles

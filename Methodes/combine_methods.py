@@ -63,7 +63,6 @@ def compute_majority_vote(image_path, methods):
     if not predictions:
         return 0
 
-    # Appliquer le vote majoritaire
     counter = Counter(predictions)
     majority_vote = counter.most_common(1)[0][0]  # Prend la valeur la plus fréquente
 
@@ -87,7 +86,7 @@ def hybrid(image_path, methods, threshold=2):
         try:
             count = method(image_path)
             if isinstance(count, tuple):
-                count = count[0]  # On ne garde que le nombre de marches
+                count = count[0]
             if isinstance(count, (int, float)):
                 predictions.append(int(count))
         except Exception as e:

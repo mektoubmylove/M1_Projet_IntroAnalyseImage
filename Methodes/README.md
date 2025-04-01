@@ -17,7 +17,6 @@ Binarisation : application d’un seuil d’Otsu pour obtenir une image en noir 
 Détection des lignes : utilisation de la Transformée de Hough pour identifier les lignes quasi-horizontales correspondant aux marches.
 
 
-Filtrage des résultats : suppression des doublons et regroupement des lignes proches pour éviter les fausses détections.
 
 ![Groupe1_Image3](../assets/detectStairs1.png)
 
@@ -126,8 +125,7 @@ Rotation de l'image (si nécessaire)
 Détection des escaliers
 - Une fois l'image traitée, les contours sont détectés à l'aide de l'algorithme de détection Canny avec les seuils optimaux calculés précédemment.
 - La transformée de Hough est ensuite utilisée pour détecter les lignes présentes dans l'image. Ces lignes correspondent souvent aux bords des marches des escaliers.
-- Les lignes détectées sont filtrées pour ne conserver que celles qui sont horizontales (représentant les marches), et ces lignes sont ensuite fusionnées si elles sont suffisamment proches les unes des autres.
-- Le nombre total de marches est compté en fonction du nombre de lignes horizontales détectées.
+- Les lignes détectées sont filtrées pour ne conserver que celles qui sont horizontales, et ces lignes sont ensuite fusionnées si elles sont suffisamment proches les unes des autres.
 
 
 ![Groupe5_image16.jpeg](../assets/detectStairs5.png)
@@ -148,7 +146,7 @@ Prétraitement de l'image
 - Détection des gradients avec Sobel : Des filtres de Sobel sont appliqués pour détecter les gradients de l'image dans les directions horizontale et verticale.
 
 
-- Seuillage : Un seuillage de type Otsu est appliqué pour binariser l'image, permettant de mieux séparer les zones de l'image contenant des bords (comme les marches des escaliers).
+- Seuillage : Un seuillage de type Otsu est appliqué pour binariser l'image, permettant de mieux séparer les zones de l'image contenant des bords .
 
 
 Détection de l'angle dominant
@@ -164,7 +162,6 @@ Détection des escaliers
 - Une nouvelle transformée de Hough est appliquée sur les bords détectés pour identifier les lignes dans l'image. Ces lignes peuvent correspondre aux bords des marches des escaliers.
 - Les positions verticales des lignes détectées sont extraites et filtrées pour ne conserver que celles qui correspondent à des lignes horizontales, c'est-à-dire celles qui représentent les marches des escaliers.
 - Fusion des lignes proches : Si plusieurs lignes sont détectées à des positions proches, elles sont fusionnées afin de ne pas les compter comme des marches distinctes.
-- Les marches détectées sont dessinées sur une copie de l'image originale en utilisant cv2.line() avec une couleur rouge.
 
 ![grp7img12.jpg](../assets/detectStairs6.png)
 

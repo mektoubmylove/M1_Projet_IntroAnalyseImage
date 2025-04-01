@@ -68,7 +68,6 @@ def detect_stairs(image):
     for y in merged_lines_y:
         cv2.line(output_image, (0, y), (image.shape[1], y), (0, 0, 255), 2)  # Rouge pour les marches détectées
 
-    # Ajouter le nombre de marches détectées sur l'image
     cv2.putText(output_image, f"Marches: {stair_count}", (40, 60),
                 cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 0, 255), 2)
     """
@@ -109,7 +108,6 @@ def detect_stairs_with_homography(image_path):
 
     rotated_image = rotate_image(image, -angle) if abs(angle) > 75 else image
 
-    # Détection finale avec affichage
     return detect_stairs(rotated_image)
 
 

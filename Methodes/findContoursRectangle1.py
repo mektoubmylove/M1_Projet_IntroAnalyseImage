@@ -9,7 +9,6 @@ def detect_stairs_rectangles(image_path):
 
     :param image_path: Chemin de l'image contenant l'escalier.
     """
-    # Charger l'image en niveaux de gris
     image = cv2.imread(image_path)
     image = imutils.resize(image, width=800)
     gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)

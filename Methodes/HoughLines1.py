@@ -49,7 +49,7 @@ def count_stairs(image_path):
             okey = True  # Variable pour éviter les doublons
 
             for y in y_keeper_for_lines:
-                if abs(y - y1) < 15:  # Vérifier si la ligne est proche d'une ligne existante
+                if abs(y - y1) < 15:  
                     okey = False
                     break
 
@@ -58,7 +58,6 @@ def count_stairs(image_path):
                 y_keeper_for_lines.append(y1)
                 stair_counter += 1
 
-        # Ajouter le texte du nombre de marches détectées
         cv2.putText(out_img, f"Nombre de marches : {stair_counter}",
                     (40, 60), cv2.FONT_HERSHEY_SIMPLEX, 1.5, (0, 255, 0), 2)
 

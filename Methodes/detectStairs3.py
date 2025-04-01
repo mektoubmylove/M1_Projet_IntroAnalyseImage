@@ -56,7 +56,7 @@ def detect_stairs(image):
         x1, y1, x2, y2 = line[0]
         pente = abs(y2 - y1) / (abs(x2 - x1) + 1e-6)
 
-        # Filtrer uniquement les lignes horizontales (pente ≈ 0)
+        # Filtrer uniquement les lignes horizontales
         if pente < 2.5:  # Plus le seuil est bas, plus la détection est stricte
             mid_y = (y1 + y2) // 2
             detected_lines_y.append(mid_y)

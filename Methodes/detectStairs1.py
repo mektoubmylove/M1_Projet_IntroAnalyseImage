@@ -21,9 +21,7 @@ def detect_stairs1(image_path):
     # Appliquer un flou gaussien pour réduire le bruit
     blurred = cv2.GaussianBlur(gray, (3, 3), 0)
 
-    # Détection des contours avec Laplacien
-    laplace = cv2.Laplacian(blurred, cv2.CV_16S, ksize=3)
-    laplace = cv2.convertScaleAbs(laplace)
+
 
     # Détection des contours avec Sobel
     sobel_x = cv2.Sobel(blurred, cv2.CV_16S, 1, 0, ksize=3)

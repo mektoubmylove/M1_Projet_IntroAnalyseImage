@@ -64,7 +64,9 @@ L’objectif principal est de développer une méthode fiable pour :
 
   >ground_truth_json = "../gt.json 
   
-   par le chemin de votre dataset et de votre vérité terrain
+   par le chemin de votre dataset et de votre vérité terrain sous la forme
+   >"data": [
+      {"image": "nomImage", "actual_count": 4, "predicted_count": null, "absolute_error": null},etc]
 - ou lancer directement l'execution de la méthode de votre choix depuis l'IDE
 
    
